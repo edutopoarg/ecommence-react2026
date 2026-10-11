@@ -32,7 +32,7 @@ function FormularioContainer() {
 
     setCargando(true);
 
-    const apiKey = "6845f09bb6fd89688b11e037a223f5f1"; // ← poné la tuya acá
+    const apiKey = import.meta.env.VITE_IMGBB_KEY; // ← poné la tuya acá
 
     const formData = new FormData();
     formData.append("image", imagenFile);
@@ -54,8 +54,11 @@ function FormularioContainer() {
         console.log("Imagen subida con éxito. URL:", datosImgbb.data.url);
 
         const productoCompleto = {
+          id: Date.now(),
           ...datosForm,
-          imagen: datosImgbb.data.url,
+          precio: Number(datosForm.precio),
+          stock: Number(datosForm.stock),
+          urlImagen: datosImgbb.data.url,
         };
 
         console.log("Producto completo:", productoCompleto);
