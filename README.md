@@ -83,6 +83,8 @@ El proyecto sigue el patrón **Container / Presentational**: los componentes `Co
 
 ---
 
+   🔗 **[Ver el sitio publicado](https://mi-ecommence-react-obregon.netlify.app)**
+   
 ## Autor
 
 **Eduardo Obregón** — Talento Tech 2026
