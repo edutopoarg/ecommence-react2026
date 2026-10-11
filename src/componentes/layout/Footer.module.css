@@ -1,0 +1,29 @@
+.footer {
+  background-color: var(--color-principal);
+  padding: 30px 10px 20px;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+.datos p {
+  color: white;
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+.footer h4 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-family: var(--fuente-titulos);
+}
+
+.copyright {
+  color: white;
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}

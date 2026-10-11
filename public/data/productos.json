@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "Semillas de albahaca",
+    "precio": 1200,
+    "stock": 15,
+    "imagen": "https://i.ibb.co/N64PGTqn/semillas.webp"
+  },
+  {
+    "id": 2,
+    "nombre": "Maceta de barro 15cm",
+    "precio": 3500,
+    "stock": 8,
+    "imagen": "https://i.ibb.co/Gfpgxg0b/maceta.webp"
+  },
+  {
+    "id": 3,
+    "nombre": "Fertilizante orgánico",
+    "precio": 2500,
+    "stock": 20,
+    "imagen": "https://i.ibb.co/gb20bcb0/fertilizante.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Tierra para macetas",
+    "precio": 1550,
+    "stock": 12,
+    "imagen": "https://i.ibb.co/jZR7bj7R/tierra.webp"
+  },
+  {
+    "id": 5,
+    "nombre": "Regadera de plástico",
+    "precio": 2200,
+    "stock": 10,
+    "imagen": "https://i.ibb.co/93S8gcz8/regadera.webp"
+  },
+  {
+    "id": 6,
+    "nombre": "Guantes de jardinería",
+    "precio": 1500,
+    "stock": 25,
+    "imagen": "https://i.ibb.co/KxpGgNcf/guantes.webp"
+  }
+]

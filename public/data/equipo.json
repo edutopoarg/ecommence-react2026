@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Soraya Moriconi",
+    "puesto": "Fundadora",
+    "email": "soraya@sorayadelahuerta.com",
+    "foto": "https://i.pravatar.cc/200?img=47"
+  },
+  {
+    "id": 2,
+    "nombre": "Candela Obregón",
+    "puesto": "Producción y cultivo",
+    "email": "candela@sorayadelahuerta.com",
+    "foto": "https://i.pravatar.cc/200?img=32"
+  },
+  {
+    "id": 3,
+    "nombre": "Milagros Obregón",
+    "puesto": "Ventas y atención al cliente",
+    "email": "milagros@sorayadelahuerta.com",
+    "foto": "https://i.pravatar.cc/200?img=20"
+  }
+]

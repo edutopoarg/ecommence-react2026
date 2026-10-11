@@ -1,0 +1,13 @@
+.equipo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+  align-items: stretch;
+}
+
+.seccion {
+  margin-top: 28px;
+}
+

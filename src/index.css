@@ -1,0 +1,33 @@
+:root {
+  --color-principal: #6b9e78;
+  --color-principal-oscuro: #55805f;
+  --color-acento: #e8a33d;
+  --color-fondo: #ffffff;
+  --color-fondo-suave: #f4f7f4;
+  --color-texto: #333333;
+  --color-borde: #d9e2da;
+
+   --fuente-titulos: 'Quicksand', sans-serif;
+  --fuente-texto: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  background-color: var(--color-fondo-suave);
+  color: var(--color-texto);
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-texto);
+}
+
+p {
+  color: var(--color-texto);
+}

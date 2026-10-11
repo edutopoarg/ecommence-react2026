@@ -1,0 +1,41 @@
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 180px;
+}
+
+.tarjeta img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.tarjeta h4 {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.tarjeta p {
+  color: white;
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.tarjeta a {
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  opacity: 0.8;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.tarjeta a:hover {
+  text-decoration: underline;
+}
