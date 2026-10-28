@@ -1,7 +1,8 @@
 import styles from './Item.module.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function Item({ imagen, nombre, precio }) {
+function Item({ id, imagen, nombre, precio }) {
   const [cantidad, setCantidad] = useState(1);
   const [esFavorito, setEsFavorito] = useState(false);
 
@@ -23,10 +24,15 @@ function Item({ imagen, nombre, precio }) {
     setEsFavorito(!esFavorito);
 };
 
+
+
   return (
     <div className={styles.tarjeta}>
-      <img src={imagen} alt={nombre} />
-      <h3>{nombre}</h3>
+      <Link to={`/producto/${id}`}>
+        <img src={imagen} alt={nombre} />
+        <h3>{nombre}</h3>
+      </Link>
+      
       <p>${precio}</p>
 
       <div className={styles.selector}>
