@@ -1,10 +1,14 @@
 import styles from './Item.module.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext.jsx';
 
 function Item({ id, imagen, nombre, precio }) {
   const [cantidad, setCantidad] = useState(1);
   const [esFavorito, setEsFavorito] = useState(false);
+
+  const { addToCart } = useCart();
+  const producto = { id, nombre, precio, imagen };
 
   const incrementar = () => {
     setCantidad(cantidad + 1);
@@ -17,6 +21,7 @@ function Item({ id, imagen, nombre, precio }) {
   };
 
   const manejarClick = () => {
+    addToCart(producto, cantidad);
     alert(`Agregaste ${cantidad} unidades de ${nombre} al carrito`);
   };
 

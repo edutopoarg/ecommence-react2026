@@ -1,25 +1,28 @@
-import styles from './Header.module.css';
-import logo from '../../assets/logo.png'; 
+import styles from "./Header.module.css";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
-
-
+import { useCart } from "../../context/CartContext";
 
 function Header() {
+  const { getCartQuantity } = useCart();
+  const totalItems = getCartQuantity();
   return (
     <header className={styles.header}>
-  <div className={styles.marca}>
-    <img src={logo} alt="Soraya de la Huerta" className={styles.logo} />
-    <h1>Soraya de la Huerta</h1>
-  </div>
+      <div className={styles.marca}>
+        <img src={logo} alt="Soraya de la Huerta" className={styles.logo} />
+        <h1>Soraya de la Huerta</h1>
+      </div>
 
-  <nav className={styles.nav}>
-    <Link to="/">Inicio</Link>
-    <Link to="/productos">Productos</Link>
-    <Link to="/contacto">Contacto</Link>
-    <Link to="/carrito">Carrito</Link>
-    <Link to="/admin">Admin</Link>
-  </nav>
-</header>
+      <nav className={styles.nav}>
+        <Link to="/">Inicio</Link>
+        <Link to="/productos">Productos</Link>
+        <Link to="/contacto">Contacto</Link>
+        <Link to="/carrito">
+          Carrito {totalItems > 0 && <span>{totalItems}</span>}
+        </Link>
+        <Link to="/admin">Admin</Link>
+      </nav>
+    </header>
   );
 }
 
