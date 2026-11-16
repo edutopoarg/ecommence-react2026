@@ -1,10 +1,11 @@
 import { useCart } from "../../context/CartContext";
+import styles from "./Cart.module.css";
 
 function Cart() {
   const { cart, clearCart, getCartTotal } = useCart();
   if (cart.length === 0) {
     return (
-      <div>
+      <div className={styles.vacio}>
         <h2>El carrito está vacío</h2>
         <p>Agregá productos para continuar la compra.</p>
       </div>
@@ -12,20 +13,32 @@ function Cart() {
   }
 
   return (
-    <div>
-      {" "}
-      <h1>Carrito de Compras</h1>{" "}
+    <div className={styles.carrito}>
+      <h2>Carrito de compras</h2>
+
       {cart.map((item) => (
-        <div key={item.id} className="cart-item">
-          {" "}
-          <h4>{item.nombre}</h4> 
-          <p>Cantidad: {item.quantity}</p>{" "}
-          <p>Precio unitario: ${item.precio}</p>{" "}
-          <p>Subtotal: ${item.precio * item.quantity}</p>{" "}
+        <div key={item.id} className={styles.item}>
+          <img src={item.imagen} alt={item.nombre} />
+
+          <div className={styles.info}>
+            <h4>{item.nombre}</h4>
+            <p>
+              {item.quantity} × ${item.precio}
+            </p>
+          </div>
+
+          <span className={styles.subtotal}>
+            ${item.precio * item.quantity}
+          </span>
         </div>
-      ))}{" "}
-      <hr /> <h3>Total a pagar: ${getCartTotal()}</h3>{" "}
-      <button onClick={clearCart}>Vaciar Carrito</button>{" "}
+      ))}
+
+      <div className={styles.resumen}>
+        <span className={styles.total}>Total: ${getCartTotal()}</span>
+        <button className={styles.vaciar} onClick={clearCart}>
+          Vaciar carrito
+        </button>
+      </div>
     </div>
   );
 }

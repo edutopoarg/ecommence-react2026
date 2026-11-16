@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import EquipoContainer from "../EquipoContainer/EquipoContainer";
+
 function Footer() {
   return (
     <footer className={styles.footer}>
@@ -10,7 +10,7 @@ function Footer() {
         <p> Martínez, Buenos Aires</p>
       </div>
 
-      <EquipoContainer />
+    
       <p className={styles.copyright}>
         &copy; 2026 Soraya de la Huerta · Semillas y plantines para tu huerta
         urbana

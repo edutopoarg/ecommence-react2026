@@ -1,0 +1,38 @@
+.hero {
+  text-align: center;
+  padding: 48px 24px 36px;
+  background-color: var(--color-fondo-suave);
+  border-radius: 12px;
+}
+
+.hero h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 32px;
+  color: var(--color-principal);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 16px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.acciones {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.verTodo {
+  display: inline-block;
+  background-color: var(--color-principal);
+  color: white;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.verTodo:hover {
+  background-color: var(--color-principal-oscuro);
+}

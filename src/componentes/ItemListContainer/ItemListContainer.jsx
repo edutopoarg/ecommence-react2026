@@ -1,7 +1,7 @@
 import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
 
-function ItemListContainer({ mensaje }) {
+function ItemListContainer({ mensaje, limite }) {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
@@ -31,11 +31,11 @@ function ItemListContainer({ mensaje }) {
   if (error) {
     return <p>Error: {error}</p>;
   }
-
+const visibles = limite ? productos.slice(0, limite) : productos;
   return (
     <div>
       <h2>{mensaje}</h2>
-      <ItemList productos={productos} />
+      <ItemList productos={visibles} />
     </div>
   );
 }
