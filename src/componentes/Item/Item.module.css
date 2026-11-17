@@ -86,3 +86,10 @@
   flex-shrink: 0;
   color: var(--color-acento);
 }
+
+.enCarrito {
+  font-size: 12px;
+  color: var(--color-principal);
+  font-weight: 600;
+  margin-bottom: 8px;
+}

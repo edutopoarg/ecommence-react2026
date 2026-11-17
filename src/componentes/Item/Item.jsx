@@ -7,8 +7,9 @@ function Item({ id, imagen, nombre, precio }) {
   const [cantidad, setCantidad] = useState(1);
   const [esFavorito, setEsFavorito] = useState(false);
 
-  const { addToCart } = useCart();
+  const { addToCart, getCantidadActual } = useCart();
   const producto = { id, nombre, precio, imagen };
+  const cantidadActual = getCantidadActual(id);
 
   const incrementar = () => {
     setCantidad(cantidad + 1);
@@ -45,6 +46,11 @@ function Item({ id, imagen, nombre, precio }) {
         <span>{cantidad}</span>
         <button onClick={incrementar}>+</button>
       </div>
+      {cantidadActual > 0 && (
+        <p className={styles.enCarrito}>
+          Ya tenés {cantidadActual} en el carrito
+        </p>
+      )}
 
       <div className={styles.acciones}>
   <button onClick={manejarClick}>Agregar al carrito</button>
